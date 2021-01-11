@@ -1,0 +1,148 @@
+.nav-link{
+    
+font-size:15px;
+margin-right:20px;
+border:2px solid #AA7467!important;;
+border-radius:10px;
+background-color:white;
+color:#52474A!important;
+padding-right: 2.5rem!important;
+padding-left: 2.5rem!important;
+}
+
+.welcome-link{
+    margin-right:10px;
+}
+
+.nav-link:hover{
+    background-color:#343239!important;
+    color:white!important;
+}
+
+.bg-dark{
+    background-color: #AA7467!important;
+}
+
+.main-1{
+    background-color:#343239;
+}
+
+.aside-1 , .aside-2{
+    color:black!important;
+    background-color:#F7F6F6;
+}
+
+.footer{
+    background-color: #98989E;
+    height:100px;
+}
+
+.color-1{
+    color:#52474A;
+}
+
+.color-2{
+    color:#AA7467;
+}
+
+.patchnote{
+margin-top:10px;
+margin-bottom:20px;
+}
+
+.hr-white{
+   background-color: white;
+}
+
+.img-logo{
+    margin-top:10px;
+    width:50px;
+    border:2px solid white;
+    padding:2px;
+    border-radius: 20px;
+}
+
+.img-brand{
+    width:100px;
+}
+
+.padding-top-sublime{
+    padding-top:20px;
+}
+
+.actus{
+
+    margin-bottom: 10px;
+}
+
+.actu-title{
+    margin-top:10px;
+    margin-bottom: 20px;
+}
+
+.footer a{
+    text-decoration: none;
+    color:white
+}
+
+.footer a:hover{
+    text-decoration: none;
+    color:black;
+    text-decoration: underline;
+}
+
+.row-image{
+    margin-top:20px;
+}
+
+.inscription-p{
+    margin-top:20px;
+}
+
+.loginError{
+    color:red;
+}
+
+.welcome_nickname{
+    margin-top:20px;
+}
+
+@media screen and (max-width: 1350px) {
+    .nav-link{
+        margin-right:10px;
+        padding-right: 1rem!important;
+        padding-left: 1rem!important;
+        }
+  }
+
+
+@media screen and (max-width: 1220px) {
+    .nav-link{
+        margin-right:10px;
+        padding-right: 1rem!important;
+        padding-left: 1rem!important;
+        }
+  }
+
+  @media screen and (max-width: 991px) {
+.aside-1{
+    max-height: 300px;
+    margin-top: 10px;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+
+}
+
+.card-img-top{
+    width:70%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.nav-link{
+    color:white!important;
+background-color: transparent;
+    }
+    
+
+  }
