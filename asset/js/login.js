@@ -13,10 +13,14 @@ var usernameToto = "toto|toto@gmail.com";
 var pwdJonas = "jesuisjonas";
 var usernameJonas = "jonas|jonas@gmail.com";
 
-login.click = function() {
+
+
+login.onclick = function() {
+  console.log(password);
   if (password == pwdToto || password == pwdJonas) {
     var tmpToto = usernameToto.split("|");
     var tmpJonas = usernameJonas.split("|");
+    console.log(username);
     if (username == tmpToto[0] || username == tmpToto[0] || username == tmpJonas[0] || username == tmpJonas[1]) {
       login();
     }
@@ -30,13 +34,15 @@ login.click = function() {
 }
 
 function login() {
-  if (username == "toto") {
+  console.log("boucle");
+  if (username == "toto" || username == "toto@gmail.com") {
     admin.style.display = block;
   }
   welcomeNickname.style.display = block;
   welcomeNickname.innerHTML = username;
   logout.style.display = block;
   log_in.style.display = none;
+  console.log("connecté")
 }
 
 logout.click = function() {

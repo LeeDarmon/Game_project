@@ -31,16 +31,16 @@
                       <a class="nav-link" href="#">Actus</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#" data-toggle="modal" data-target="#ConnexionModale" id="login">Connexion</a>
+                      <a class="nav-link" href="#" data-toggle="modal" data-target="#ConnexionModale" id="log_in">Connexion</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="admin">Admin</a>
+                        <a class="nav-link" href="#" id="admin"  style="display:none;">Admin</a>
                     </li>
                   <li class="nav-item welcome-link">
-                      <p class="text-white welcome_nickname">Bienvenue, <span id="welcomeNickname">Lee</span></p>
+                      <p class="text-white welcome_nickname"><span id="welcomeNickname" style="display:none;"></span></p>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#" id="logout">Deconnexion</a>
+                    <a class="nav-link" href="#" id="logout"  style="display:none;">Deconnexion</a>
                 </li>
                   </ul>
                 </div>
@@ -207,7 +207,7 @@
               </div>
 
               <!--end-->
-                         <!--modale connexion-->
+                         <!--modale inscription-->
                          <div class="modal fade bd-example-modal-lg" id="InscriptionModal" tabindex="-1" role="dialog" aria-labelledby="InscriptionModal" aria-hidden="true">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content text-center">
@@ -218,7 +218,7 @@
                                 </button>
                               </div>
                               <div class="modal-body">
-                                <form>
+                    
                                   <div class="form-group">
                                     <input type="text" class="form-control" id="nickname" maxlenght="50" aria-describedby="pseudo" placeholder="Votre pseudo">
                                   </div>
@@ -231,10 +231,10 @@
                                   <div class="form-group">
                                     <input type="password" class="form-control" id="verifPassword" aria-describedby="emailHelp" placeholder="Password">
                                   </div>
-                                  <button type="submit" class="btn btn-primary" id="login">Inscription</button>
-                                </form>
+                                  <button type="submit" class="btn btn-primary" id="signin">Inscription</button>
+
           
-                                <p class=text-center><span id="loginError"></span></p>
+                                <p class=text-center><span id="signinError"></span></p>
                                 <p class="inscription-p text-center">Vous n'avez pas de compte? Veuillez vous <a href="#">Inscrire ici.</a></p>
                                  
                               </div>
@@ -248,7 +248,6 @@
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-        <script src="asset/js/inscription.js"></script>
         <script src="asset/js/login.js"></script>
         <script src="asset/js/signin.js"></script>
     </body>
