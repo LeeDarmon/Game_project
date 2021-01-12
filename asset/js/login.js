@@ -6,6 +6,7 @@ var welcomeNickname = document.getElementById('welcomeNickname');
 var logout = document.getElementById('logout');
 var admin = document.getElementById('admin');
 var log_in = document.getElementById('log_in');
+var loginModal = document.getElementById('loginModal');
 
 var pwdToto = "jesuistoto";
 var usernameToto = "toto|toto@gmail.com";
@@ -14,8 +15,6 @@ var pwdJonas = "jesuisjonas";
 var usernameJonas = "jonas|jonas@gmail.com";
 
 login.onclick = function() {
-  console.log(username.value);
-  console.log(password.value);
   if (password.value == pwdToto || password.value == pwdJonas) {
     var tmpToto = usernameToto.split("|");
     var tmpJonas = usernameJonas.split("|");
@@ -32,21 +31,19 @@ login.onclick = function() {
 }
 
 function loging() {
-  if (username.value == "toto") {
-    admin.style.display = block;
-    console.log("display admin");
+  if (username.value == "toto" || username.value == "toto@gmail.com") {
+    admin.style.display = "block";
   }
-  welcomeNickname.style.display = block;
+  welcomeNickname.style.display = "block";
   welcomeNickname.innerHTML = username.value;
-  logout.style.display = block;
-  log_in.style.display = none;
-  console.log("On affiche les bonnes choses");
+  logout.style.display = "block";
+  log_in.style.display = "none";
+  loginModal.modal = "hide";
 }
 
 logout.onclick = function() {
-  welcomeNickname.style.display = none;
+  welcomeNickname.style.display = "none";
   welcomeNickname.innerHTML = null;
-  logout.style.display = none;
-  log_in.style.display = block;
-  console.log("On retire ce qu'on doit retirer");
+  logout.style.display = "none";
+  log_in.style.display = "block";
 }
