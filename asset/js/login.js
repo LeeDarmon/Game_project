@@ -1,6 +1,6 @@
 var username = document.getElementById('identifiant');
 var login = document.getElementById('login');
-var error = document.getElementById('loginError');
+var loginError = document.getElementById('loginError');
 var welcomeNickname = document.getElementById('welcomeNickname');
 var logout = document.getElementById('logout');
 var admin = document.getElementById('admin');
@@ -25,11 +25,11 @@ login.onclick = function() {
       loging();
     }
     else {
-      error.innerHTML = "Identifiant incorrect";
+      loginError.innerHTML = "Identifiant incorrect";
     }
   }
   else {
-    error.innerHTML = "Mot de passe incorrect";
+    loginError.innerHTML = "Mot de passe incorrect";
   }
 }
 
