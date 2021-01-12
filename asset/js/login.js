@@ -38,7 +38,7 @@ function loging() {
   welcomeNickname.innerHTML = username.value;
   logout.style.display = "block";
   log_in.style.display = "none";
-  loginModal.modal = "hide";
+  loginModal.style.display = "none";
 }
 
 logout.onclick = function() {

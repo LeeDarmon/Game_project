@@ -29,6 +29,6 @@ signin.onclick = function() {
 }
 
 function signing() {
-  signinModal.modal = "hide";
+  signinModal.style.display = "none";
   console.log("Vous êtes bien inscrit !");
 }
