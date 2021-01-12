@@ -26,9 +26,9 @@ signin.onclick = function() {
   if (!regex.test(email.value)) {
       error.innerHTML = "Adresse email non valide";
   }
-  signin();
+  signing();
 }
 
-function signin() {
+function signing() {
   console.log("Vous êtes bien inscrit !");
 }
