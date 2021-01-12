@@ -1,0 +1,15 @@
+#response {
+  text-align: center;
+}
+
+main {
+  height: 85vh;
+}
+
+.timer {
+  font-size: 6em;
+}
+
+.informations {
+  font-size: 3em;
+}
