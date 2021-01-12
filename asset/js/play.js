@@ -95,6 +95,9 @@ var lettersArray;
 
 display(indice);
 
+timer.innerHTML = time;
+timer.style.visibility = "visible";
+
 refreshTimer = setInterval(function(){
   time--;
   timer.innerHTML = time;
@@ -196,5 +199,3 @@ function display(i) {
     console.log("word : "+word);
   }
 }
-
-timer.style.visibility = "visible";
