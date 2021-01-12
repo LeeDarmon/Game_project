@@ -6,6 +6,7 @@ var logout = document.getElementById('logout');
 var admin = document.getElementById('admin');
 var log_in = document.getElementById('log_in');
 var loginModal = document.getElementById('loginModal');
+var body = document.getElementById('body');
 
 //========== Sert de DB =========================//
 var pwdToto = "jesuistoto";
@@ -41,6 +42,7 @@ function loging() {
   logout.style.display = "block";
   log_in.style.display = "none";
   loginModal.style.display = "none";
+  body.style.overflowY = "visible";
 }
 
 logout.onclick = function() {
