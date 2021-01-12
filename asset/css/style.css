@@ -99,14 +99,20 @@ margin-bottom:20px;
     margin-top:20px;
 }
 
-.loginError{
+#loginError{
+    color:red;
+}
+
+#signinError{
     color:red;
 }
 
 .welcome_nickname{
     margin-top:20px;
 }
-
+.modal{
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
 @media screen and (max-width: 1350px) {
     .nav-link{
