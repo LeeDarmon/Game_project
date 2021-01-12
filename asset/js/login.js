@@ -1,4 +1,3 @@
-var password = document.getElementById('loginPassword');
 var username = document.getElementById('identifiant');
 var login = document.getElementById('login');
 var error = document.getElementById('loginError');
@@ -8,14 +7,16 @@ var admin = document.getElementById('admin');
 var log_in = document.getElementById('log_in');
 var loginModal = document.getElementById('loginModal');
 
+//========== Sert de DB =========================//
 var pwdToto = "jesuistoto";
 var usernameToto = "toto|toto@gmail.com";
 
 var pwdJonas = "jesuisjonas";
 var usernameJonas = "jonas|jonas@gmail.com";
+//===============================================//
 
 login.onclick = function() {
-  console.log(password.value);
+  var password = document.getElementById('loginPassword');
   if (password.value == pwdToto || password.value == pwdJonas) {
     var tmpToto = usernameToto.split("|");
     var tmpJonas = usernameJonas.split("|");
@@ -40,6 +41,8 @@ function loging() {
   logout.style.display = "block";
   log_in.style.display = "none";
   loginModal.style.display = "none";
+
+
 }
 
 logout.onclick = function() {
@@ -47,4 +50,5 @@ logout.onclick = function() {
   welcomeNickname.innerHTML = null;
   logout.style.display = "none";
   log_in.style.display = "block";
+  admin.style.display = "none";
 }
