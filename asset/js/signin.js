@@ -1,4 +1,4 @@
-var password = document.getElementById('password');
+var password = document.getElementById('signinPassword');
 var verifPassword = document.getElementById('verifPassword');
 var nickname = document.getElementById('nickname');
 var signin = document.getElementById('signin');
