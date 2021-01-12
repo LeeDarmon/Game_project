@@ -100,6 +100,8 @@ refreshTimer = setInterval(function(){
   timer.innerHTML = time;
 },1000);
 
+timer.style.display = "block";
+
 timeout = setTimeout(function () {
   clearInterval(refreshTimer);
   display(-2);
