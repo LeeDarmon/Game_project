@@ -9,13 +9,11 @@ var user = "toto";
 var mail = "toto@gmail.com";
 var regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-console.log(nickname.value);
-console.log(email.value);
-console.log(password.value);
-console.log(verifPassword.value);
-
-
-signin.click = function() {
+signin.onclick = function() {
+  console.log(nickname.value);
+  console.log(email.value);
+  console.log(password.value);
+  console.log(verifPassword.value);
   if (password.value != verifPassword.value) {
     error.innerHTML = "Vérification de mot de passe érronée";
   }
