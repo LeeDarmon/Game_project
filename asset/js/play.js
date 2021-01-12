@@ -51,7 +51,10 @@ var timer = document.getElementById('timer');
 var remainingWords = document.getElementById('remainingWords');
 var letters = document.getElementById('letters');
 var response = document.getElementById('response');
-var playingTab = new Array;
+var help = document.getElementById('help');
+var skip = document.getElementById('skip');
+var playingArray = new Array;
+var time = 0;
 
 response.focus();
 
@@ -59,20 +62,24 @@ switch (theme) {
   case 'transport':
     switch (level) {
       case '1':
-        playingTab = transportLevel1;
+        playingArray = transportLevel1;
+        time = 100;
         break;
       case '2':
-        playingTab = transportLevel2;
+        time = 150;
+        playingArray = transportLevel2;
         break;
       case '3':
-        playingTab = transportLevel3;
+        time = 200;
+        playingArray = transportLevel3;
         break;
     }
     break;
   case 'animals':
     switch (level) {
       case '1':
-        playingTab = animalsLevel1;
+        time = 100;
+        playingArray = animalsLevel1;
         break;
     }
     break;
@@ -81,26 +88,30 @@ switch (theme) {
 var indice = 0;
 var word = "";
 var pts = 0;
+var gain = 100;
+var helpCount = 0;
+var helpArray;
+var lettersArray;
 
 display(indice);
 
 refreshTimer = setInterval(function(){
-  timer.innerHTML--;
+  time--;
+  timer.innerHTML = time;
 },1000);
 
 timeout = setTimeout(function () {
   clearInterval(refreshTimer);
   display(-2);
-}, 60150);
-
-
+}, time*1000+300);
 
 response.onkeyup = function() {
   var tmp = response.value;
   if (word == tmp.toLowerCase()){
     indice++;
-    pts += 100;
-    if (indice < playingTab.length) {
+    pts += gain;
+    if (gain!= 100) gain = 100;
+    if (indice < playingArray.length) {
       display(indice);
     }
     else {
@@ -109,12 +120,47 @@ response.onkeyup = function() {
   }
 }
 
+help.onclick = function() {
+  var tmp = "";
+  if (helpCount > 0) {
+    gain -= Math.floor(100/word.length);
+    randomLetter();
+    helpCount--;
+    for (var i = 0 ; i < word.length ; i++) {
+      tmp = tmp+lettersArray[i];
+    }
+    letters.innerHTML = tmp;
+  }
+}
+
+skip.onclick = function() {
+  if (indice < playingArray.length-1) {
+    insertQueueArray();
+  }
+}
+
+function insertQueueArray() {
+  var tmp = playingArray[indice];
+  playingArray.splice(indice,1);
+  playingArray.splice(playingArray.length,0,tmp);
+  display(indice);
+}
+
+function randomLetter() {
+  var i = Math.floor(Math.random() * (word.length-1 - 0 +1)) + 0;
+  while(helpArray[i] != undefined) {
+    i = Math.floor(Math.random() * (word.length-1 - 0 +1)) + 0;
+  }
+  helpArray[i] = true;
+  lettersArray[i] = word[i]+" ";
+}
+
 function display(i) {
   if (i == -2) {
     indication.innerHTML = "";
     remainingWords.innerHTML = "";
     response.disabled = true;
-    response.value = "C\'EST PERDU";
+    response.value = "C\'EST PERDU !";
     clearInterval(refreshTimer);
     letters.innerHTML = "";
     points.innerHTML = "";
@@ -123,20 +169,26 @@ function display(i) {
     indication.innerHTML = "";
     remainingWords.innerHTML = "";
     response.disabled = true;
-    response.value = "C\'EST GAGNE";
+    response.value = "C\'EST GAGNE !";
     clearTimeout(timeout);
     clearInterval(refreshTimer);
     letters.innerHTML = "";
     points.innerHTML = "";
+    pts += timer.innerHTML*25;
+    console.log(pts);
   }
   else {
-    var tmp = playingTab[i].split(";");
+    var tmp = playingArray[i].split(";");
     word = tmp[0];
     indication.innerHTML = tmp[1];
     remainingWords.innerHTML = (10-i)+" mots restants";
     response.value = null;
+    helpCount = word.length-1;
+    helpArray = new Array(word.length);
+    lettersArray = new Array(word.length);
     var tmp2 = "";
     for (var j = 0 ; j < word.length ; j++) {
+      lettersArray[j] = "_ ";
       tmp2 = tmp2+"_ ";
     }
     letters.innerHTML = tmp2;
