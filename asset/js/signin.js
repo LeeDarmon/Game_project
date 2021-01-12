@@ -10,21 +10,21 @@ var mail = "toto@gmail.com";
 var regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
 signin.click = function() {
-  if (password != verifPassword) {
+  if (password.value != verifPassword.value) {
     error.innerHTML = "Vérification de mot de passe érronée";
   }
-  if (nickname == user) {
+  if (nickname.value == user) {
     error.innerHTML = "Ce pseudo est déjà utilisé";
   }
-  if (email == mail) {
+  if (email.value == mail) {
     error.innerHTML = "Cette adresse est déjà utilisée";
   }
-  if (!regex.test(email)) {
+  if (!regex.test(email.value)) {
       error.innerHTML = "Adresse email non valide";
   }
   signin();
 }
 
 function signin() {
-  console.log("Vous êtes bien inscrit !")
+  console.log("Vous êtes bien inscrit !");
 }
