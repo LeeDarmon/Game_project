@@ -15,6 +15,7 @@ var pwdJonas = "jesuisjonas";
 var usernameJonas = "jonas|jonas@gmail.com";
 
 login.onclick = function() {
+  console.log(password.value);
   if (password.value == pwdToto || password.value == pwdJonas) {
     var tmpToto = usernameToto.split("|");
     var tmpJonas = usernameJonas.split("|");
