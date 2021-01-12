@@ -14,27 +14,27 @@ var pwdJonas = "jesuisjonas";
 var usernameJonas = "jonas|jonas@gmail.com";
 
 login.click = function() {
-  if (password == pwdToto || password == pwdJonas) {
+  if (password.value == pwdToto || password.value == pwdJonas) {
     var tmpToto = usernameToto.split("|");
     var tmpJonas = usernameJonas.split("|");
-    if (username == tmpToto[0] || username == tmpToto[0] || username == tmpJonas[0] || username == tmpJonas[1]) {
+    if (username.value == tmpToto[0] || username.value == tmpToto[0] || username.value == tmpJonas[0] || username.value == tmpJonas[1]) {
       login();
     }
     else {
-      error.innerHTML = "Identifiant incorrect"
+      error.innerHTML = "Identifiant incorrect";
     }
   }
   else {
-    error.innerHTML = "Mot de passe incorrect"
+    error.innerHTML = "Mot de passe incorrect";
   }
 }
 
 function login() {
-  if (username == "toto") {
+  if (username.value == "toto") {
     admin.style.display = block;
   }
   welcomeNickname.style.display = block;
-  welcomeNickname.innerHTML = username;
+  welcomeNickname.innerHTML = username.value;
   logout.style.display = block;
   log_in.style.display = none;
 }
