@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../BootStrap/bootstrap.min.css" />
     <link rel="stylesheet" href="../BootStrap/bootstrap-grid.css" />
     <link rel="stylesheet" href="../BootStrap/bootstrap-grid.min.css" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Choix du thème et du niveau</title>
 </head>
 <body>
@@ -62,13 +62,13 @@
                         <div id="carouselThemeControls" class="carousel slide" data-ride="carousel" data-pause="true" data-interval="false">
                             <div class="carousel-inner">
                               <div class="carousel-item active">
-                                <label for="themeChoiceOne"><input type="radio" name="themeChoice" id="themeChoiceOne" class="buttonradio"/><img src="../images/transports.png" class="d-block w-200" alt="Theme Transport"></label>
+                                <label for="themeChoiceOne"><input type="radio" name="themeChoice" id="themeChoice1" hidden/>Transports<img src="../images/transports.png" class="d-block w-200" alt="Theme Transport" title="Transports"></label>
                               </div>
                               <div class="carousel-item" data-pause="true" data-interval="false">
-                                <label for="themeChoiceTwo"><input type="radio" name="themeChoice" id="themeChoiceTwo" class="buttonradio"/><img src="../images/animaux.png" class="d-block w-200" alt="Theme Animaux"></label>
+                                <label for="themeChoiceTwo"><input type="radio" name="themeChoice" id="themeChoice2" hidden/>Animaux<img src="../images/animaux.png" class="d-block w-200" alt="Theme Animaux" title="Animaux"></label>
                               </div>
                               <div class="carousel-item" data-pause="true" data-interval="false">
-                                <label for="themeChoiceThree"><input type="radio" name="themeChoice" id="themeChoiceThree" class="buttonradio"/><img src="../images/sciences.png" class="d-block w-200" alt="Theme Science"></label>
+                                <label for="themeChoiceThree"><input type="radio" name="themeChoice" id="themeChoiceThree" hidden/>Sciences<img src="../images/sciences.png" class="d-block w-200" alt="Theme Science" title="Sciences"></label>
                               </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselThemeControls" role="button" data-slide="prev">
@@ -88,13 +88,13 @@
                         <div id="carouselLevelControls" class="carousel slide" data-ride="carousel" data-pause="true" data-interval="false">
                             <div class="carousel-inner">
                               <div class="carousel-item active" data-pause="true" data-interval="">
-                                <label for="levelChoiceOne"><input type="radio" name="levelChoice" id="levelChoiceOne" class="buttonradio"/><img src="../images/1star.jpg" class="d-block w-100" alt="Choix niveau 1"></label>
+                                <label for="levelChoice1"><input type="radio" name="levelChoice" id="levelChoice1" alt="Cliquer pour choisir" hidden/><img src="../images/1star.jpg" class="d-block w-1500" alt="Choix niveau 1" title="Niveau 1"></label>
                               </div>
                               <div class="carousel-item"  data-pause="true" data-interval="">
-                                <label for="levelChoiceTwo"><input type="radio" name="levelChoice" id="levelChoiceTwo" class="buttonradio"/><img src="../images/2star.jpg" class="d-block w-100" alt="Choix niveau 2"></label>
+                                <label for="levelChoice2"><input type="radio" name="levelChoice" id="levelChoice2" alt="Cliquer pour choisir" hidden/><img src="../images/2star.jpg" class="d-block w-500" alt="Choix niveau 2" title="Niveau 2"></label>
                               </div>
                               <div class="carousel-item" data-pause="true" data-interval="">
-                                <label for="levelChoiceThree"><input type="radio" name="levelChoice" id="levelChoiceThree" class="buttonradio"/><img src="../images/3star.jpg" class="d-block w-100" alt="Choix niveau 3"></label>
+                                <label for="levelChoice3"><input type="radio" name="levelChoice" id="levelChoice3" alt="Cliquer pour choisir" hidden/><img src="../images/3star.jpg" class="d-block w-500" alt="Choix niveau 3" title="Niveau 3"></label>
                               </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselLevelControls" role="button" data-slide="prev">
@@ -111,17 +111,16 @@
                     </div>
                 </div>
                 <div class="col-md-6 bg-warning align-text-bottom order-md-6">
-                    <ol class="">
-                        <li>Temps pour deviner une liste de mot : <span id="rule1">60/50/40 secondes</span></li>
-                        <li>Nombre de mots : <span id="rule2">8/10/12</span></li>
+                    <ol>
+                        <li>Temps pour deviner une liste de mot : <span id="rule1">60/150/200</span> secondes</li>
+                        <li>Nombre de mots : <span id="rule2">10/12/15</span></li>
                         <li>Bonus de points pour finir avant le chrono : <span id="rule3">20/30/50</span></li>
                     </ol>
                 </div>
             </div>
-            <div class="row">
                 
                 <div class="col-md-12 col-12"><img src="../images/jouer.png" id="startGame" class="align-center"/></div>
-            </div>
+            
         </form>
     </div>
     </main>
@@ -146,7 +145,6 @@
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    
     <script src="../BootStrap/bootstrap.bundle.min.js"></script>
     <script src="../css/style.css"></script>
 </body>

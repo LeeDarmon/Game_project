@@ -144,7 +144,12 @@ margin-bottom:20px;
 background-color: transparent;
     }
 
-.buttonradio {
-    visibility: hidden;
-    display: none;
-}
+/* input[type=radio]{
+    visibility:hidden; /*Fonctionne avec Firefox */
+
+  }
+  input[type=radio]:checked + label{
+    visibility:visible; /*Fonctionne avec Firefox */
+    font-weight: bolder;
+    border-color: #FF0000;
+  }   */
