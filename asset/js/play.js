@@ -24,7 +24,7 @@ var transportLevel2 = ['péniche;Transport de cargaison fluvial',
   'roller;Transport à roulettes montées sur chaussure',
   'ski;Transport sur neige',
   'pédalo;Transport naval se propulsant avec les pieds'];
-var transportLevel3 = ['Yacht;bateau de plaisance',
+var transportLevel3 = ['yacht;bateau de plaisance',
   'trirème;bateau grec à 3 rangs de rames',
   'funiculaire;Remontée mécanique sur rail',
   'diligence;Voiture à cheval pour transport de voyageur',
@@ -40,7 +40,7 @@ var animalsLevel1 = ['girafe;Long cou',
   'poule;Cot cot',
   'araignée;Moche avec 8 yeux',
   'chenille;Se transforme en jolie papillon',
-  'autruche;Faire la tête d\'...',
+  'autruche;Faire l\'...',
   'cochon;Gruik gruik',
   'dauphin;Flipper',
   'orque;Sauvez Willy !'];
@@ -52,6 +52,8 @@ var remainingWords = document.getElementById('remainingWords');
 var letters = document.getElementById('letters');
 var response = document.getElementById('response');
 var playingTab = new Array;
+
+response.focus();
 
 switch (theme) {
   case 'transport':
@@ -88,8 +90,8 @@ refreshTimer = setInterval(function(){
 
 timeout = setTimeout(function () {
   clearInterval(refreshTimer);
-  display(-1);
-}, 60050);
+  display(-2);
+}, 60150);
 
 
 
@@ -108,11 +110,22 @@ response.onkeyup = function() {
 }
 
 function display(i) {
-  if (i == -1) {
+  if (i == -2) {
+    indication.innerHTML = "";
+    remainingWords.innerHTML = "";
+    response.disabled = true;
+    response.value = "C\'EST PERDU";
+    clearInterval(refreshTimer);
+    letters.innerHTML = "";
+    points.innerHTML = "";
+  }
+  else if (i == -1) {
     indication.innerHTML = "";
     remainingWords.innerHTML = "";
     response.disabled = true;
     response.value = "C\'EST GAGNE";
+    clearTimeout(timeout);
+    clearInterval(refreshTimer);
     letters.innerHTML = "";
     points.innerHTML = "";
   }
