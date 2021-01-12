@@ -19,8 +19,8 @@ login.onclick = function() {
   if (password.value == pwdToto || password.value == pwdJonas) {
     var tmpToto = usernameToto.split("|");
     var tmpJonas = usernameJonas.split("|");
-    if (username.value == tmpToto[0] || username.value == tmpToto[0] || username.value == tmpJonas[0] || username.value == tmpJonas[1]) {
-      login();
+    if (username.value == tmpToto[0] || username.value == tmpToto[1] || username.value == tmpJonas[0] || username.value == tmpJonas[1]) {
+      loging();
     }
     else {
       error.innerHTML = "Identifiant incorrect";
@@ -31,7 +31,7 @@ login.onclick = function() {
   }
 }
 
-function login() {
+function loging() {
   if (username.value == "toto") {
     admin.style.display = block;
     console.log("display admin");
