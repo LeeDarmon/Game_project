@@ -13,6 +13,10 @@ var usernameToto = "toto|toto@gmail.com";
 var pwdJonas = "jesuisjonas";
 var usernameJonas = "jonas|jonas@gmail.com";
 
+console.log(username.value);
+console.log(password.value);
+
+
 login.click = function() {
   if (password.value == pwdToto || password.value == pwdJonas) {
     var tmpToto = usernameToto.split("|");
@@ -32,12 +36,13 @@ login.click = function() {
 function login() {
   if (username.value == "toto") {
     admin.style.display = block;
+    console.log("display admin");
   }
   welcomeNickname.style.display = block;
   welcomeNickname.innerHTML = username.value;
   logout.style.display = block;
   log_in.style.display = none;
-  console.log("connecté")
+  console.log("On affiche les bonnes choses");
 }
 
 logout.click = function() {
@@ -45,5 +50,5 @@ logout.click = function() {
   welcomeNickname.innerHTML = null;
   logout.style.display = none;
   log_in.style.display = block;
-
+  console.log("On retire ce qu'on doit retirer");
 }
