@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="FR">
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+    <!-- <link rel="icon" type="image/png" href="../images/pumpkin_logo.jpg" /> -->
+    <link rel="stylesheet" href="../BootStrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../BootStrap/bootstrap-grid.css" />
+    <link rel="stylesheet" href="../BootStrap/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Choix du thème et du niveau</title>
+</head>
+<body>
+  <div class="container-fluid">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="asset/images/capture.PNG" class="img-fluid img-brand rounded" alt="">
+           Find-Us
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Jouer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Classement</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Actus</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#ConnexionModale" id="login">Connexion</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="admin">Admin</a>
+            </li>
+          <li class="nav-item welcome-link">
+              <p class="text-white welcome_nickname">Bienvenue, <span id="welcomeNickname">Lee</span></p>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="logout">Deconnexion</a>
+        </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-12 order-md-1">Thème</div>
+            <div class="col-md-2 col-12 order-md-3">Niveau</div>
+            <div class="col-md-6 col-12 order-md-5">Règles</div>
+        </div>
+        <form action="jeu.html" method="GET">
+            <div class="row order-md-2">
+                <div class="col-md-4 bg-primary h-100">
+                    <div class="row">
+                        <div id="carouselThemeControls" class="carousel slide" data-ride="carousel" data-pause="true" data-interval="false">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <label for="themeChoiceOne"><input type="radio" name="themeChoice" id="themeChoiceOne" class="buttonradio"/><img src="../images/transports.png" class="d-block w-200" alt="Theme Transport"></label>
+                              </div>
+                              <div class="carousel-item" data-pause="true" data-interval="false">
+                                <label for="themeChoiceTwo"><input type="radio" name="themeChoice" id="themeChoiceTwo" class="buttonradio"/><img src="../images/animaux.png" class="d-block w-200" alt="Theme Animaux"></label>
+                              </div>
+                              <div class="carousel-item" data-pause="true" data-interval="false">
+                                <label for="themeChoiceThree"><input type="radio" name="themeChoice" id="themeChoiceThree" class="buttonradio"/><img src="../images/sciences.png" class="d-block w-200" alt="Theme Science"></label>
+                              </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselThemeControls" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselThemeControls" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-2 bg-secondary order-md-4">
+                    <div class="row">
+                        <div id="carouselLevelControls" class="carousel slide" data-ride="carousel" data-pause="true" data-interval="false">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active" data-pause="true" data-interval="">
+                                <label for="levelChoiceOne"><input type="radio" name="levelChoice" id="levelChoiceOne" class="buttonradio"/><img src="../images/1star.jpg" class="d-block w-100" alt="Choix niveau 1"></label>
+                              </div>
+                              <div class="carousel-item"  data-pause="true" data-interval="">
+                                <label for="levelChoiceTwo"><input type="radio" name="levelChoice" id="levelChoiceTwo" class="buttonradio"/><img src="../images/2star.jpg" class="d-block w-100" alt="Choix niveau 2"></label>
+                              </div>
+                              <div class="carousel-item" data-pause="true" data-interval="">
+                                <label for="levelChoiceThree"><input type="radio" name="levelChoice" id="levelChoiceThree" class="buttonradio"/><img src="../images/3star.jpg" class="d-block w-100" alt="Choix niveau 3"></label>
+                              </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselLevelControls" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselLevelControls" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6 bg-warning align-text-bottom order-md-6">
+                    <ol class="">
+                        <li>Temps pour deviner une liste de mot : <span id="rule1">60/50/40 secondes</span></li>
+                        <li>Nombre de mots : <span id="rule2">8/10/12</span></li>
+                        <li>Bonus de points pour finir avant le chrono : <span id="rule3">20/30/50</span></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-md-12 col-12"><img src="../images/jouer.png" id="startGame" class="align-center"/></div>
+            </div>
+        </form>
+    </div>
+    </main>
+    <footer class="footer">
+      <div class="row">
+          <div class="col-4"><p class="text-center text-white padding-top-sublime"><a href="#" data-toggle="modal" data-target="#MentionsModale">Mentions légales</a></p></div>
+          <div class="col-4">
+              <div class="row row-image">
+                  <div class="col-4"><img src="https://bassin-arcachon.com/wp-content/uploads/2017/02/logo-facebook-blanc.png" class="img-logo img-fluid"></div>
+                  <div class="col-4"><img src="https://bassin-arcachon.com/wp-content/uploads/2017/02/logo-twitter-blanc.png" class="img-logo img-fluid"></div>
+                  <div class="col-4"><img src="https://www.lagriffenoire.com/template/images/resoSocio/icon-youtube.png" class="img-logo img-fluid"></div>
+              </div>
+          </div>
+          <div class="col-4">
+              <p class="text-center text-white copy-text padding-top-sublime">Copyright xxx 2021</p>
+          </div>
+      </div>
+  </footer>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    <script src="../BootStrap/bootstrap.bundle.min.js"></script>
+    <script src="../css/style.css"></script>
+</body>
+</html>
