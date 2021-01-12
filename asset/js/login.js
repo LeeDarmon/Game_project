@@ -39,6 +39,8 @@ function loging() {
   logout.style.display = "block";
   log_in.style.display = "none";
   loginModal.style.display = "none";
+  var shadeLoginModal = document.getElementsByClassName('modal-backdrop');
+  shadeLoginModal.style.display = "none";
 }
 
 logout.onclick = function() {
