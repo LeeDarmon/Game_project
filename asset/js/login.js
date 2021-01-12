@@ -6,6 +6,7 @@ var logout = document.getElementById('logout');
 var admin = document.getElementById('admin');
 var log_in = document.getElementById('log_in');
 var loginModal = document.getElementById('loginModal');
+var body = document.getElementById('body');
 
 //========== Sert de DB =========================//
 var pwdToto = "jesuistoto";
@@ -17,6 +18,7 @@ var usernameJonas = "jonas|jonas@gmail.com";
 
 login.onclick = function() {
   var password = document.getElementById('loginPassword');
+  console.log(error);
   if (password.value == pwdToto || password.value == pwdJonas) {
     var tmpToto = usernameToto.split("|");
     var tmpJonas = usernameJonas.split("|");
@@ -41,8 +43,7 @@ function loging() {
   logout.style.display = "block";
   log_in.style.display = "none";
   loginModal.style.display = "none";
-
-
+  body.style.overflowY = "visible";
 }
 
 logout.onclick = function() {

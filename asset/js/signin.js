@@ -5,6 +5,7 @@ var signin = document.getElementById('signin');
 var error = document.getElementById('signinError');
 var email = document.getElementById('email');
 var signinModal = document.getElementById('signinModal');
+var body = document.getElementById('body');
 
 var user = "toto";
 var mail = "toto@gmail.com";
@@ -31,4 +32,5 @@ signin.onclick = function() {
 function signing() {
   signinModal.style.display = "none";
   console.log("Vous êtes bien inscrit !");
+  body.style.overflowY = "visible";
 }
