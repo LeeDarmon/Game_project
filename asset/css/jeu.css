@@ -2,8 +2,15 @@
   text-align: center;
 }
 
+.body{
+  background-color: #AA7467!important;
+  color:white!important;
+}
+
 main {
   height: 85vh;
+  
+
 }
 
 .timer {
@@ -13,3 +20,43 @@ main {
 .informations {
   font-size: 3em;
 }
+
+.input-util{
+  margin-top:20px;
+}
+
+.timer-size{
+  border:7px solid white;
+  border-radius:40px;
+  padding:20px;
+}
+
+.nav-link{
+    
+  color:white!important;
+background-color: transparent!important;
+  }
+
+
+@media screen and (max-width: 768px) {
+  .timer-size{
+    font-size:55px;
+    font-weight: bold;
+  }
+.informations{
+  width:100%;
+  
+}
+
+.pts, .wds{
+  font-size:25px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+}
+

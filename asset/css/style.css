@@ -2,12 +2,22 @@
     
 font-size:15px;
 margin-right:20px;
-border:2px solid #AA7467!important;;
+border:2px solid #AA7467!important;
 border-radius:10px;
 background-color:white;
-color:#52474A!important;
 padding-right: 2.5rem!important;
 padding-left: 2.5rem!important;
+font-weight: bold!important;
+}
+
+.navbar-dark .navbar-brand {
+    font-weight: bold;
+}
+
+
+.navbar-dark .navbar-nav .nav-link {
+    color:#52474A;
+ 
 }
 
 .welcome-link{
@@ -32,9 +42,16 @@ padding-left: 2.5rem!important;
     background-color:#F7F6F6;
 }
 
-.footer{
+.header{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.footer {
     background-color: #98989E;
-    height:100px;
+    height: 100px;
+    margin-left: -15px;
+    margin-right: -15px;
 }
 
 .color-1{
@@ -147,7 +164,7 @@ margin-bottom:20px;
 }
 
 .nav-link{
-    
+
     color:white!important;
 background-color: transparent;
     }

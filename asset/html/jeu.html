@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="../css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body>
+  <body class="body">
     <div class="container-fluid">
       <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-dark bg-dark text-white">
           <a class="navbar-brand" href="#">
-            <img src="images/capture.PNG" class="img-fluid img-brand rounded" alt="">
+            <img src="../images/capture.PNG" class="img-fluid img-brand rounded" alt="">
             Find-Us
             </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,14 +43,14 @@
       <main class="col-12">
         <div class="row">
           <div class="col-12 text-center mt-4 timer">
-            <span id="timer">60</span>
+            <span id="timer" class="timer-size">60</span>
           </div>
         </div>
         <div class="row">
-          <div class="col text-left informations">
+          <div class="col text-left informations pts">
             <span id="points"></span>
           </div>
-          <div class="col text-right informations">
+          <div class="col text-right informations wds">
             <span id="remainingWords"></span>
           </div>
         </div>
@@ -66,7 +66,7 @@
         </div>
         <div class="row">
           <div class="col text-center">
-            <input type="text" id="response" class="informations"/>
+            <input type="text" id="response" class="informations input-util"/>
           </div>
         </div>
       </main>
