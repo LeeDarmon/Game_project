@@ -1,4 +1,4 @@
-var password = document.getElementById('password');
+var password = document.getElementById('loginPassword');
 var username = document.getElementById('identifiant');
 var login = document.getElementById('login');
 var error = document.getElementById('loginError');
