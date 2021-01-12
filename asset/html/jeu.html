@@ -65,9 +65,25 @@
           </div>
         </div>
         <div class="row">
-          <div class="col text-center">
+
+          <div class="col-12 text-center hidden-mobile">
+            <button class="btn btn-success btn-help" id="help">?</button>
             <input type="text" id="response" class="informations input-util"/>
+            <button class="btn btn-success btn-skip" id="skip">&#x2794;</button>
           </div>
+
+          <div class="col-12 text-center hidden-other">
+            <div class="row">
+              <div class="col-12">
+              <input type="text" id="response" class="informations input-util"/>
+              </div>
+            </div>
+            <div class="row text-center btn-container">
+              <div class="col-4 offset-2"><button class="btn btn-success float-right btn-help" id="help">?</button></div>
+              <div class="col-4"><button class="btn btn-success float-left btn-skip" id="skip">&#x2794;</button></div>
+            </div>
+          </div>
+          
         </div>
       </main>
       <footer class="footer">
@@ -81,10 +97,32 @@
             </div>
           </div>
           <div class="col-4">
-            <p class="text-center text-white copy-text padding-top-sublime">Copyright xxx 2021</p>
+            <p class="text-center text-white copy-text padding-top-sublime">Copyright Find-us 2021</p>
           </div>
         </div>
       </footer>
+    </div>
+    <div class="modal fade" id="MentionsModale" tabindex="-1" role="dialog" aria-labelledby="MentionsModaleLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="MentionsModaleLabel">Mentions legales</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              Post quorum necem nihilo lenius ferociens Gallus ut leo cadaveribus pastus multa huius modi scrutabatur. quae singula narrare non refert, me professione modum, quod evitandum est, excedamus.<br>
+  
+              Quod si rectum statuerimus vel concedere amicis, quidquid velint, vel impetrare ab iis, quidquid velimus, perfecta quidem sapientia si simus, nihil habeat res vitii; sed loquimur de iis amicis qui ante oculos sunt, quos vidimus aut de quibus memoriam accepimus, quos novit vita communis. Ex hoc numero nobis exempla sumenda sunt, et eorum quidem maxime qui ad sapientiam proxime accedunt.<br>
+              
+              Quo cognito Constantius ultra mortalem modum exarsit ac nequo casu idem Gallus de futuris incertus agitare quaedam conducentia saluti suae per itinera conaretur, remoti sunt omnes de industria milites agentes in civitatibus perviis.<br>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
