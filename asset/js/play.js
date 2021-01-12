@@ -100,7 +100,7 @@ refreshTimer = setInterval(function(){
   timer.innerHTML = time;
 },1000);
 
-timer.style.display = "block";
+timer.style.visibility = "visible";
 
 timeout = setTimeout(function () {
   clearInterval(refreshTimer);
