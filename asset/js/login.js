@@ -13,11 +13,9 @@ var usernameToto = "toto|toto@gmail.com";
 var pwdJonas = "jesuisjonas";
 var usernameJonas = "jonas|jonas@gmail.com";
 
-console.log(username.value);
-console.log(password.value);
-
-
-login.click = function() {
+login.onclick = function() {
+  console.log(username.value);
+  console.log(password.value);
   if (password.value == pwdToto || password.value == pwdJonas) {
     var tmpToto = usernameToto.split("|");
     var tmpJonas = usernameJonas.split("|");
@@ -45,7 +43,7 @@ function login() {
   console.log("On affiche les bonnes choses");
 }
 
-logout.click = function() {
+logout.onclick = function() {
   welcomeNickname.style.display = none;
   welcomeNickname.innerHTML = null;
   logout.style.display = none;
