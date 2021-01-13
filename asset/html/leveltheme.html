@@ -9,13 +9,14 @@
   <link rel="stylesheet" href="../BootStrap/bootstrap-grid.css" />
   <link rel="stylesheet" href="../BootStrap/bootstrap-grid.min.css" />
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/jeu.css" />
   <title>Choix du thème et du niveau</title>
 </head>
 
-<body>
+<body class="body">
   <div class="container-fluid">
     <header class="header">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-dark bg-dark">
           <a class="navbar-brand" href="../../index.html">
               <img src="../images/capture.PNG" class="img-fluid img-brand rounded" alt="">
              Find-Us
@@ -51,77 +52,78 @@
         </nav>
       </header>
     <main>
+
       <div class="container-fluid">
 
         <form action="#" method="GET">
 
           <div class="row">
             <!-- Première ligne -->
-            <div class="col-md-4 col-12 order-1 order-md-1 bg-primary text-center">Thème</div>
-            <div class="col-md-2 col-12 order-3 order-md-2 bg-secondary text-center">Niveau</div>
-            <div class="col-md-6 col-12 order-5 order-md-3 bg-warning text-center">Règles</div>
+            <div class="col-md-3 col-12 order-1 order-md-1 text-center mb-3 title-theme">Thème</div>
+            <div class="col-md-3 col-12 order-3 order-md-2 text-center mb-3 title-level">Niveau</div>
+            <div class="col-md-6 col-12 order-5 order-md-3 text-center mb-3 title-rules">Règles</div>
             <!-- Deuxième ligne -->
-            <div class="col-md-4 bg-primary h-100 order-2 order-md-4">
+            <div class="col-md-3 h-100 order-2 order-md-4">
               <div id="carouselThemeControls" class="carousel slide" data-ride="carousel" data-pause="true"
                 data-interval="false">
                 <div class="carousel-inner">
                   <div class="carousel-item active text-center">
                     <label for="themeChoiceOne"><input type="radio" name="themeChoice" id="transport"
-                        hidden />Transports<img src="../images/transports.png" class="d-block w-100"
+                        hidden />Transports<img src="../images/transports.png" class="d-block img-caroussel"
                         alt="Theme Transport" title="Transports"></label>
                   </div>
                   <div class="carousel-item text-center">
                     <label for="themeChoiceTwo"><input type="radio" name="themeChoice" id="animals"
-                        hidden />Animaux<img src="../images/animaux.png" class="d-block w-100" alt="Theme Animaux"
+                        hidden />Animaux<img src="../images/animaux.png" class="d-block img-caroussel" alt="Theme Animaux"
                         title="Animaux"></label>
                   </div>
                   <div class="carousel-item text-center">
                     <label for="themeChoiceThree"><input type="radio" name="themeChoice" id="sciences"
-                        hidden />Sciences<img src="../images/sciences.png" class="d-block w-100" alt="Theme Science"
+                        hidden />Sciences<img src="../images/sciences.png" class="d-block img-caroussel" alt="Theme Science"
                         title="Sciences"></label>
                   </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselThemeControls" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
+                  <span class="sr-only" id="themeLeft">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselThemeControls" role="button" data-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
+                  <span class="sr-only" id="themeRight">Next</span>
                 </a>
               </div>
             </div>
-            <div class="col-md-2 bg-secondary order-md-5 order-4">
+            <div class="col-md-3 order-md-5 order-4">
               <div id="carouselLevelControls" class="carousel slide" data-ride="carousel" data-pause="true"
                 data-interval="false">
                 <div class="carousel-inner">
                   <div class="carousel-item active text-center">
                     <label for="levelChoice1"><input type="radio" name="levelChoice" id="levelChoice1" hidden />Niveau
-                      1<img src="../images/1star.jpg" class="d-block w-100" alt="Choix niveau 1"
+                      1<img src="../images/c1.png" class="d-block img-caroussel img-level" alt="Choix niveau 1"
                         title="Niveau 1"></label>
                   </div>
                   <div class="carousel-item text-center">
                     <label for="levelChoice2"><input type="radio" name="levelChoice" id="levelChoice2" hidden />Niveau
-                      2<img src="../images/2star.jpg" class="d-block w-100" alt="Choix niveau 2"
+                      2<img src="../images/c2.png" class="d-block img-caroussel img-level" alt="Choix niveau 2"
                         title="Niveau 2"></label>
                   </div>
                   <div class="carousel-item text-center">
                     <label for="levelChoice3"><input type="radio" name="levelChoice" id="levelChoice3" hidden />Niveau
-                      3<img src="../images/3star.jpg" class="d-block w-500" alt="Choix niveau 3"
+                      3<img src="../images/c3.png" class="d-block img-caroussel img-level" alt="Choix niveau 3"
                         title="Niveau 3"></label>
                   </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselLevelControls" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
+                  <span class="sr-only" id="levelLeft">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselLevelControls" role="button" data-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
+                  <span class="sr-only" id="levelRight">Next</span>
                 </a>
               </div>
             </div>
-            <div class="col-md-6 bg-warning align-text-bottom order-md-6 order-6">
+            <div class="col-md-6 text-center order-md-6 order-6">
               <ol>
                 <li>Temps pour deviner une liste de mot : <span id="rule1">60/150/200</span> secondes</li>
                 <li>Nombre de mots : <span id="rule2">10/12/15</span></li>
@@ -172,6 +174,7 @@
     crossorigin="anonymous"></script>
   <script src="../BootStrap/bootstrap.bundle.min.js"></script>
   <script src="../js/leveltheme.js"></script>
+  <script src="../js/rulestheme.js"></script>
 
 </body>
 

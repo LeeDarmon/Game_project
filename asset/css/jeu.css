@@ -53,6 +53,19 @@ background-color: transparent!important;
   color:black;
 }
 
+.title-rules, .title-level, .title-theme{
+  font-weight: bold;
+  font-size:25px;
+}
+
+.img-caroussel{
+  width:100px;
+}
+
+.img-level{
+  height:100px;
+}
+
   @media screen and (min-width: 768px) {
     .hidden-other{
       display:none;
