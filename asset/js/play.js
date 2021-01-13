@@ -4,7 +4,7 @@ theme = theme[1];
 var level = parameters[1].split("=");
 level = level[1];
 
-var transportLevel1 = ['vélo;Transport à 2 roues où il faut pédaler',
+var transportLevel1 = ['velo;Transport à 2 roues où il faut pédaler',
   'trottinette;Transport à deux roues où il faut pousser avec le pied',
   'moto;Transport à deux roues à moteur',
   'voiture;Transport à 4 roues à moteur',
@@ -12,9 +12,9 @@ var transportLevel1 = ['vélo;Transport à 2 roues où il faut pédaler',
   'avion;Transport volant',
   'bateau;Transport marin',
   'train;Transport ferrovier',
-  'fusée;Transport dans l\'espace',
+  'fusee;Transport dans l\'espace',
   'cheval;Transport animalier à 4 pattes'];
-var transportLevel2 = ['péniche;Transport de cargaison fluvial',
+var transportLevel2 = ['peniche;Transport de cargaison fluvial',
   'tgv;Train grande vitesse',
   'ascenseur;Transporte d\'un étage à l\'autre',
   'charrette;Ancien moyen de transport à 2 roues constitué d\'un plateau',
@@ -23,14 +23,14 @@ var transportLevel2 = ['péniche;Transport de cargaison fluvial',
   'sous-marin;Transport allant sous l\'eau',
   'roller;Transport à roulettes montées sur chaussure',
   'ski;Transport sur neige',
-  'pédalo;Transport naval se propulsant avec les pieds'];
+  'pedalo;Transport naval se propulsant avec les pieds'];
 var transportLevel3 = ['yacht;bateau de plaisance',
-  'trirème;bateau grec à 3 rangs de rames',
+  'trireme;bateau grec à 3 rangs de rames',
   'funiculaire;Remontée mécanique sur rail',
   'diligence;Voiture à cheval pour transport de voyageur',
   'catamaran;Transport naval possédant 2 coques et une voile',
   'luge;Transport de glisse sur neige',
-  'téléphérique;Remontée mécanique par cable aérien',
+  'telepherique;Remontée mécanique par cable aérien',
   'skateboard;Une planche et 4 roues',
   'hydravion;Avion capable de déjauger',
   'camionnette;Petit camion'];
@@ -38,7 +38,7 @@ var animalsLevel1 = ['girafe;Long cou',
   'chien;Ouaf',
   'loup;C\'est pour mieux te manger mon enfant',
   'poule;Cot cot',
-  'araignée;Moche avec 8 yeux',
+  'araignee;Moche avec 8 yeux',
   'chenille;Se transforme en jolie papillon',
   'autruche;Faire l\'...',
   'cochon;Gruik gruik',
@@ -111,6 +111,7 @@ timeout = setTimeout(function () {
 
 response.onkeyup = function() {
   var tmp = response.value;
+  tmp = tmp.replace(/[éè]/g,'e');
   if (word == tmp.toLowerCase()){
     indice++;
     pts += gain;
