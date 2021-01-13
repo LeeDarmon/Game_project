@@ -178,7 +178,6 @@ margin-bottom:20px;
     color:white!important;
 background-color: transparent;
     }
-    
 
   }
 
@@ -189,3 +188,21 @@ background-color: transparent;
     }
 
   }
+/* input[type=radio]{
+    visibility:hidden; /*Fonctionne avec Firefox */
+
+  
+  input[type=radio]:checked + label{
+    visibility:visible; /*Fonctionne avec Firefox */
+    font-weight: bolder;
+    border-color: #FF0000;
+  }   */
+
+.cgButtonGame{
+    border: none;
+    background: transparent;
+}
+button{
+    border: none;
+    background: transparent;
+}
