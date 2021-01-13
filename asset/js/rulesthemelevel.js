@@ -24,19 +24,19 @@ levelRight.onclick = function() {
 function displayrule(id) {
   switch (id) {
     case '1' :
-      rule1.innerHTML = "60";
-      rule2.innerHTML = "150";
-      rule3.innerHTML = "200";
+      rule1.innerHTML = "100";
+      rule2.innerHTML = "10";
+      rule3.innerHTML = "20";
       break;
     case '2' :
-      rule1.innerHTML = "10";
+      rule1.innerHTML = "150";
       rule2.innerHTML = "12";
-      rule3.innerHTML = "15";
+      rule3.innerHTML = "30";
       break;
     case '3' :
-      rule1.innerHTML = "20";
-      rule2.innerHTML = "30";
-      rule3.innerHTML = "50";
+      rule1.innerHTML = "200";
+      rule2.innerHTML = "15";
+      rule3.innerHTML = "40";
       break;
   }
 }
