@@ -145,6 +145,11 @@ margin-bottom:20px;
     
 }
 
+.row-item{
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
 @media screen and (max-width: 1350px) {
     .nav-link{
         margin-right:10px;
@@ -185,6 +190,11 @@ background-color: transparent;
 
   }
 
+  .container-item{
+      height:500px;
+      line-height: 20px;
+  }
+
   @media screen and (max-width: 575px) {
     .img-logo {
         max-width: 75px;
@@ -208,4 +218,8 @@ background-color: transparent;
 button{
     border: none;
     background: transparent;
+}
+
+.cglh{
+    line-height: 50px;
 }
