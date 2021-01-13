@@ -1,4 +1,4 @@
-var parameters = location.search.substring(1).split("&");
+var parameters = location.search.substring(1).split("&");//Récupère l'url et découpe les paramètres
 var theme = parameters[0].split("=");
 theme = theme[1];
 var level = parameters[1].split("=");
@@ -51,8 +51,8 @@ var animalsLevel2 = ['pingouin;Oiseau de l\'hémisphère nord blanc et noir',
   'gnou;Bovidé d\'afrique',
   'zebre;Cheval code barre',
   'mygale;Araignée poilue',
-  'faisan;Grosse poule coloré',
-  'hamster;Rongeur ayant un héros de jeu vidéo',
+  'tapir;Mammifère à trompe',
+  'babouin;Singe d\'Afrique',
   'kangourou;Marsupial d\'australie'];
 var animalsLevel3 = ['gavial;Reptile du Nil',
   'crotale;Seul viperidae trouvable en Amérique ',
@@ -125,7 +125,7 @@ var lettersArray;
 display(indice);
 
 timer.innerHTML = time;
-timer.style.visibility = "visible";
+timer.style.visibility = "visible";//Permet d'initialiser le timer dès l'affichage de la page
 
 refreshTimer = setInterval(function(){
   time--;
@@ -135,30 +135,30 @@ refreshTimer = setInterval(function(){
 timeout = setTimeout(function () {
   clearInterval(refreshTimer);
   display(-2);
-}, time*1000+300);
+}, time*1000+300);//le + 300 permet de bien afficher le 0 avant la fin
 
-response.onkeyup = function() {
+response.onkeyup = function() {//Pour chaque caractère tapé dans l'input
   var tmp = response.value;
-  tmp = tmp.replace(/[éè]/g,'e');
-  if (word == tmp.toLowerCase()){
+  tmp = tmp.replace(/[éè]/g,'e');//remplace les accents
+  if (word == tmp.toLowerCase()){//On met tout en petit
     indice++;
     pts += gain;
-    if (gain!= 100) gain = 100;
-    help = false;
-    if (indice < playingArray.length) {
+    if (gain!= 100) gain = 100;//Si pénalité de point à cause d'un help on réinitialise le gain 'normal' de point
+    helped = false;//Réinitialise l'aide
+    if (indice < playingArray.length) {//On parcourt le tableau de mots
       display(indice);
     }
     else {
-      display(-1);
+      display(-1);//C'est gagné
     }
   }
 }
 
-help.onclick = function() {
-  help = true;
+help.onclick = function() {//Permet d'afficher une lettre aléatoire pour aider
+  helped = true;//Bloque le skip
   var tmp = "";
   if (helpCount > 0) {
-    gain -= Math.floor(100/word.length);
+    gain -= Math.floor(100/word.length);//Pour chaque help sur un mot, réduit le nombre de point gagner après l'avoir trouvé
     randomLetter();
     helpCount--;
     for (var i = 0 ; i < word.length ; i++) {
@@ -168,30 +168,30 @@ help.onclick = function() {
   }
 }
 
-skip.onclick = function() {
-  if (indice < playingArray.length-1 && !help) {
+skip.onclick = function() {//Permet de skip un mot et le placer à la fin
+  if (indice < playingArray.length-1 && !helped) {
     insertQueueArray();
   }
 }
 
 function insertQueueArray() {
-  var tmp = playingArray[indice];
-  playingArray.splice(indice,1);
-  playingArray.splice(playingArray.length,0,tmp);
-  display(indice);
+  var tmp = playingArray[indice];//On récupère l'élément à skip
+  playingArray.splice(indice,1);//On le supprime du tableau
+  playingArray.splice(playingArray.length,0,tmp);//On l'ajoute à la fin
+  display(indice);//On réaffiche l'écran avec le nouveau mot
 }
 
 function randomLetter() {
   var i = Math.floor(Math.random() * (word.length-1 - 0 +1)) + 0;
-  while(helpArray[i] != undefined) {
+  while(helpArray[i] != undefined) {//Tant que l'indice aléatoire est le même qu'un qui a déjà été tiré on recommence
     i = Math.floor(Math.random() * (word.length-1 - 0 +1)) + 0;
   }
   helpArray[i] = true;
-  lettersArray[i] = word[i]+" ";
+  lettersArray[i] = word[i]+" ";//Affiche un caractère aléatoire pour aider
 }
 
-function display(i) {
-  if (i == -2) {
+function display(i) {//Affiche les éléments à l'écran
+  if (i == -2) {//C'EST PERDU
     indication.innerHTML = "";
     remainingWords.innerHTML = "";
     response.disabled = true;
@@ -200,7 +200,7 @@ function display(i) {
     points.innerHTML = "";
     displayModal(0);
   }
-  else if (i == -1) {
+  else if (i == -1) {//C'EST GAGNE
     indication.innerHTML = "";
     remainingWords.innerHTML = "";
     response.disabled = true;
@@ -211,7 +211,7 @@ function display(i) {
     pts += timer.innerHTML*25;
     displayModal(1);
   }
-  else {
+  else {//On change de mot
     var tmp = playingArray[i].split(";");
     word = tmp[0];
     indication.innerHTML = tmp[1];
