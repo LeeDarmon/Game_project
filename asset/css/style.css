@@ -18,6 +18,12 @@ body{
     overflow-x: hidden;
 }
 
+main {
+    min-height: 85vh;
+    
+  
+  }
+
 
 .navbar-dark .navbar-nav .nav-link {
     color:#52474A;
