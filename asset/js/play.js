@@ -55,6 +55,7 @@ var help = document.getElementById('help');
 var skip = document.getElementById('skip');
 var playingArray = new Array;
 var time = 0;
+var helped = false;
 
 response.focus();
 
@@ -114,6 +115,7 @@ response.onkeyup = function() {
     indice++;
     pts += gain;
     if (gain!= 100) gain = 100;
+    help = false;
     if (indice < playingArray.length) {
       display(indice);
     }
@@ -124,6 +126,7 @@ response.onkeyup = function() {
 }
 
 help.onclick = function() {
+  help = true;
   var tmp = "";
   if (helpCount > 0) {
     gain -= Math.floor(100/word.length);
@@ -137,7 +140,7 @@ help.onclick = function() {
 }
 
 skip.onclick = function() {
-  if (indice < playingArray.length-1) {
+  if (indice < playingArray.length-1 && !help) {
     insertQueueArray();
   }
 }
