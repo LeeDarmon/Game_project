@@ -29,7 +29,8 @@ var levelURL = "level=";
 startGame.onclick = function() {
   setTheme();
   setLevel();
-  window.location.assign(url+themeURL+"&"+levelURL);
+  console.log(themeURL+""+levelURL);
+  // window.location.assign(url+themeURL+"&"+levelURL);
   };
 
 function setTheme() {
