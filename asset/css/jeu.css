@@ -66,6 +66,13 @@ background-color: transparent!important;
   height:100px;
 }
 
+.col-sublime{
+  /* background-color: white;
+  color: #AA7467;
+  border:2px solid white;
+  border-radius: 20px; */
+}
+
   @media screen and (min-width: 768px) {
     .hidden-other{
       display:none;
