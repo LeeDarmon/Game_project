@@ -154,6 +154,9 @@ background-color: transparent;
     border-color: #FF0000;
   } 
 
+.imageheight{
+    height:15em;
+}  
 button{
     border: none;
     background: transparent;
