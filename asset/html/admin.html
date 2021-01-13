@@ -2,14 +2,14 @@
 <html lang="FR">
 
 <head>
-    <meta charset='utf-8'>
-    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+    <meta charset=utf-8>
+    <meta name="viewport" content="initial-scale = 1.0</li> maximum-scale = 1.0</li> user-scalable = no</li> width = device-width">
     <link rel="icon" type="image/png" href="../images/capture.PNG" />
     <link rel="stylesheet" href="../BootStrap/bootstrap.min.css" />
     <link rel="stylesheet" href="../BootStrap/bootstrap-grid.css" />
     <link rel="stylesheet" href="../BootStrap/bootstrap-grid.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Choix du thème et du niveau</title>
+    <title>Admin</title>
 </head>
 
 <body>
@@ -43,7 +43,7 @@
                             <a class="nav-link" href="#" id="admin">Admin</a>
                         </li>
                         <li class="nav-item welcome-link">
-                            <p class="text-white welcome_nickname">Bienvenue, <span id="welcomeNickname">Lee</span></p>
+                            <p class="text-white welcome_nickname">Bienvenue</li> <span id="welcomeNickname">Lee</span></p>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" id="logout">Deconnexion</a>
@@ -56,60 +56,51 @@
             <div class="container-fluid">
                 <form action="#" method="POST">
                     <div class="row">
-                        <div class="col-md-3 col-12 text-center order-md-1 order-1">Liste de Thème</div>
-                        <div class="col-md-3 col-12 text-center order-md-2 order-4 d-none">Liste de niveau</div>
-                        <div class="col-md-3 col-12 text-center order-md-3 order-7 d-none">Liste de mots</div>
-                        <div class="col-md-3 col-12 text-center order-md-4 order-10 d-none">Liste d'indices</div>
-                        <div class="col-md-3 col-12 order-md-5 order-2">
+                        <div class="col-md-4 col-12 text-center order-md-1 order-1">Liste de Thème</div>
+                        <div class="col-md-4 col-12 text-center order-md-2 order-4">Liste de niveau</div>
+                        <div class="col-md-4 col-12 text-center order-md-3 order-7">Liste de mots</div>
+                        <div class="col-md-4 col-12 order-md-5 order-2">
                             <ol type="A" id="listTheme">
-                                <li>Transports<button id="subTheme1" class="btn btn-warning">-</button></li>
-                                <li>Animaux<button id="subTheme2" class="btn btn-warning">-</button></li>
+                                <li><span class="text-success">Transports<button id="subTheme1" class="btn btn-warning">-</button></li>
+                                <li>Animaux</span><button id="subTheme2" class="btn btn-warning">-</button></li>
                                 <li>Sciences<button id="subTheme3" class="btn btn-warning">-</button></li>
-                            </ol>
-                            
+                            </ol>   
                         </div>
-                        <div class="col-md-3 col-12 order-md-6 order-5">
-                            <ol type="I" id="listLevel" class="d-none">
-                                <li>Niveau 1</li><button id="subLevel1" class="btn btn-warning">-</button>
-                                <li>Niveau 2</li><button id="subLevel2" class="btn btn-warning">-</button>
-                                <li>Niveau 3</li><button id="subLevel3" class="btn btn-warning">-</button>
+                        <div class="col-md-4 col-12 order-md-6 order-5">
+                            <ol type="I" id="listLevel">
+                                <li><span class="text-success">Niveau 1</span><button id="subLevel1" class="btn btn-warning">-</button></li>
+                                <li>Niveau 2<button id="subLevel2" class="btn btn-warning">-</button></li>
+                                <li>Niveau 3<button id="subLevel3" class="btn btn-warning">-</button></li>
                             </ol>
-                            
                         </div>
-                        <div class="col-md-3 col-12 order-md-7 order-8">
-                            <ol type="1" id="listWord" class="d-none">
-                                <li>mot 1</li><button id="subWord1" class="btn btn-warning">-</button>
-                                <li>mot 2</li><button id="subWord2" class="btn btn-warning">-</button>
-                                <li>mot 3</li><button id="subWord3" class="btn btn-warning">-</button>
-                                <li>mot 4</li><button id="subWord4" class="btn btn-warning">-</button>
+                        <div class="col-md-4 col-12 order-md-7 order-8">
+                            <ol type="1" id="listWord">
+                                <li>velo;Transport à 2 roues où il faut pédaler<button id="subWord1" class="btn btn-warning">-</button></li>
+                                <li>trottinette;Transport à deux roues où il faut pousser avec le pied<button id="subWord2" class="btn btn-warning">-</button></li>
+                                <li>moto;Transport à deux roues à moteur<button id="subWord3" class="btn btn-warning">-</button></li>
+                                <li>voiture;Transport à 4 roues à moteur<button id="subWord4" class="btn btn-warning">-</button></li>
+                                <li>bus;Transport en commun à 4 roues<button id="subWord5" class="btn btn-warning">-</button></li>
+                                <li>avion;Transport volant<button id="subWord6" class="btn btn-warning">-</button></li>
+                                <li>bateau;Transport marin<button id="subWord7" class="btn btn-warning">-</button></li>
+                                <li>train;Transport ferrovière<button id="subWord8" class="btn btn-warning">-</button></li>
+                                <li>fusee;Transport dans l'espace<button id="subWord9" class="btn btn-warning">-</button></li>
+                                <li>cheval;Transport animalier à 4 pattes<button id="subWord10" class="btn btn-warning">-</button></li>                                
                             </ol>
-                            
                         </div>
-                        <div class="col-md-3 col-12 order-md-8 order-11">
-                            <ol type="1" id="indiceWord" class="d-none">
-                                <li>Indice mot 1</li><button id="subIndice1" class="btn btn-warning">-</button>
-                                <li>Indice mot 2</li><button id="subIndice2" class="btn btn-warning">-</button>
-                                <li>Indice mot 3</li><button id="subIndice3" class="btn btn-warning">-</button>
-                                <li>Indice mot 4</li><button id="subIndice4" class="btn btn-warning">-</button>
-                            </ol>
-                            
-                        </div>
-                        <div class="col-md-3 col-12 text-center order-md-9 order-3" id="newTheme">
+                        
+                        <div class="col-md-4 col-12 text-center order-md-9 order-3" id="newTheme">
                             <input type="text" id="addNewTheme" placeholder="Nom du nouveau thème"/>
                             <button id="addTheme" class="btn btn-success">+</button>
                         </div>
-                        <div class="col-md-3 col-12 text-center order-md-10 order-6 d-none" id="newLevel">
+                        <div class="col-md-4 col-12 text-center order-md-10 order-6" id="newLevel">
                             <input type="text" id="addNewLevel" placeholder="Nouveau niveau"/>
-                            <button id="addLevel">+</button>
+                            <button id="addLevel" class="btn btn-success">+</button>
                         </div>
-                        <div class="col-md-3 col-12 text-center order-md-11 order-9 d-none" id="newWord">
+                        <div class="col-md-4 col-12 text-center order-md-11 order-9" id="newWord">
                             <input type="text" id="addNewWord" placeholder="Nouveau mot"/>
-                            <button id="addWord">+</button>
+                            <button id="addWord" class="btn btn-success">+</button>
                         </div>
-                        <div class="col-md-3 col-12 text-center order-md-12 order-12 d-none" id="newIndice">
-                            <input type="text" id="addNewIndice" placeholder="Nouvel indice"/>
-                            <button id="addIndice">+</button>
-                        </div>
+                        
                     </div>
                 </form>
             </div>
@@ -155,3 +146,5 @@
 </body>
 
 </html>
+
+
