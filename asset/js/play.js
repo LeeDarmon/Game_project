@@ -44,6 +44,26 @@ var animalsLevel1 = ['girafe;Long cou',
   'cochon;Gruik gruik',
   'dauphin;Flipper',
   'orque;Sauvez Willy !'];
+var animalsLevel2 = ['pingouin;Oiseau de l\'hémisphère nord blanc et noir',
+  'bison;Bovidé d\'amérique du nord',
+  'baleine;Le plus grand des cétacés',
+  'hirondelle;Oiseau migrateur très connus',
+  'gnou;Bovidé d\'afrique',
+  'zebre;Cheval code barre',
+  'mygale;Araignée poilue',
+  'faisan;Grosse poule coloré',
+  'hamster;Rongeur ayant un héros de jeu vidéo',
+  'kangourou;Marsupial d\'australie'];
+var animalsLevel3 = ['gavial;Reptile du Nil',
+  'crotale;Seul viperidae trouvable en Amérique ',
+  'lynx;Félin des forêts boréales',
+  'dodo;Malheur à vous',
+  'hase;Femelle du lièvre',
+  'hyene;Ricane',
+  'wapiti;Cervidés d\'amérique du nord',
+  'narval;Licorne des mers',
+  'jaguar;Félin d\'Amérique du sud',
+  'fennec;Renard des sables'];
 
 var indication = document.getElementById('indication');
 var points = document.getElementById('points');
@@ -81,6 +101,14 @@ switch (theme) {
       case '1':
         time = 100;
         playingArray = animalsLevel1;
+        break;
+      case '2':
+        time = 150;
+        playingArray = animalsLevel2;
+        break;
+      case '3':
+        time = 200;
+        playingArray = animalsLevel3;
         break;
     }
     break;
@@ -199,7 +227,7 @@ function display(i) {
     }
     letters.innerHTML = tmp2;
     points.innerHTML = pts+" points";
-    console.log("word : "+word);
+    //console.log("word : "+word);
   }
 }
 
