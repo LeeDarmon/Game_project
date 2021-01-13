@@ -208,6 +208,7 @@ function displayModal(i) {
   var pointsSpan = document.getElementById('pts');
 
   resultModal.classList.add("show");
+  resultModal.style.display = "block";
   if (i == 0) {
     winloose.innerHTML = "C\'EST PERDU !"
   }
