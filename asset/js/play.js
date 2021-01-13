@@ -166,22 +166,21 @@ function display(i) {
     indication.innerHTML = "";
     remainingWords.innerHTML = "";
     response.disabled = true;
-    response.value = "C\'EST PERDU !";
     clearInterval(refreshTimer);
     letters.innerHTML = "";
     points.innerHTML = "";
+    displayModal(0);
   }
   else if (i == -1) {
     indication.innerHTML = "";
     remainingWords.innerHTML = "";
     response.disabled = true;
-    response.value = "C\'EST GAGNE !";
     clearTimeout(timeout);
     clearInterval(refreshTimer);
     letters.innerHTML = "";
     points.innerHTML = "";
     pts += timer.innerHTML*25;
-    console.log(pts);
+    displayModal(1);
   }
   else {
     var tmp = playingArray[i].split(";");
@@ -201,4 +200,19 @@ function display(i) {
     points.innerHTML = pts+" points";
     console.log("word : "+word);
   }
+}
+
+function displayModal(i) {
+  var resultModal = document.getElementById('resultModal');
+  var winloose = document.getElementById('resultat');
+  var pointsSpan = document.getElementById('pts');
+
+  resultModal.style.display = block;
+  if (i == 0) {
+    winloose.innerHTML = "C\'EST PERDU !"
+  }
+  else {
+    winloose.innerHTML = "C\'EST GAGNE !"
+  }
+  pointsSpan.innerHTML = pts;
 }
