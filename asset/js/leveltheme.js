@@ -1,5 +1,5 @@
 var startGame = document.getElementById('startGame');
-var url = "file:///home/axel/Game_project/asset/html/jeu.html?"
+var url = "../html/jeu.html?"
 var themeURL = "theme=";
 var levelURL = "level=";
 var theme;
@@ -9,8 +9,7 @@ startGame.onclick = function() {
   selectVariable();
   setTheme();
   setLevel();
-  console.log(themeURL+""+levelURL);
-  // window.location.assign(url+themeURL+"&"+levelURL);
+  window.location.assign(url+themeURL+"&"+levelURL);
   };
 
 function selectVariable() {
