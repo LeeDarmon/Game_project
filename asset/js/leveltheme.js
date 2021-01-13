@@ -9,6 +9,7 @@ startGame.onclick = function() {
   selectVariable();
   setTheme();
   setLevel();
+  console.log(url+themeURL+"&"+levelURL);
   window.location.assign(url+themeURL+"&"+levelURL);
   };
 
@@ -36,8 +37,7 @@ function selectVariable() {
 }
 
 function setTheme() {
-  var id = theme.id;
-  themeURL += id[id.length-1];
+  themeURL += theme.id;
 }
 
 function setLevel() {
