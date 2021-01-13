@@ -1,4 +1,4 @@
-var parameters = location.search.substring(1).split("&");
+var parameters = location.search.substring(1).split("&");//Récupère l'url et découpe les paramètres
 var theme = parameters[0].split("=");
 theme = theme[1];
 var level = parameters[1].split("=");
@@ -51,8 +51,8 @@ var animalsLevel2 = ['pingouin;Oiseau de l\'hémisphère nord blanc et noir',
   'gnou;Bovidé d\'afrique',
   'zebre;Cheval code barre',
   'mygale;Araignée poilue',
-  'faisan;Grosse poule coloré',
-  'hamster;Rongeur ayant un héros de jeu vidéo',
+  'tapir;Mammifère à trompe',
+  'babouin;Singe d\'Afrique',
   'kangourou;Marsupial d\'australie'];
 var animalsLevel3 = ['gavial;Reptile du Nil',
   'crotale;Seul viperidae trouvable en Amérique ',
@@ -125,7 +125,7 @@ var lettersArray;
 display(indice);
 
 timer.innerHTML = time;
-timer.style.visibility = "visible";
+timer.style.visibility = "visible";//Permet d'initialiser le timer dès l'affichage de la page
 
 refreshTimer = setInterval(function(){
   time--;
@@ -135,16 +135,16 @@ refreshTimer = setInterval(function(){
 timeout = setTimeout(function () {
   clearInterval(refreshTimer);
   display(-2);
-}, time*1000+300);
+}, time*1000+300);//le + 300 permet de bien afficher le 0 avant la fin
 
-response.onkeyup = function() {
+response.onkeyup = function() {//Pour chaque caractère tapé dans l'input
   var tmp = response.value;
-  tmp = tmp.replace(/[éè]/g,'e');
-  if (word == tmp.toLowerCase()){
+  tmp = tmp.replace(/[éè]/g,'e');//remplace les accents
+  if (word == tmp.toLowerCase()){//On met tout en petit
     indice++;
     pts += gain;
-    if (gain!= 100) gain = 100;
-    help = false;
+    if (gain!= 100) gain = 100;//Si pénalité de point à cause d'un help on réinitialise le gain 'normal' de point
+    helped = false;//Réinitialise l'aide
     if (indice < playingArray.length) {
       display(indice);
     }
@@ -155,7 +155,7 @@ response.onkeyup = function() {
 }
 
 help.onclick = function() {
-  help = true;
+  helped = true;
   var tmp = "";
   if (helpCount > 0) {
     gain -= Math.floor(100/word.length);
@@ -169,7 +169,7 @@ help.onclick = function() {
 }
 
 skip.onclick = function() {
-  if (indice < playingArray.length-1 && !help) {
+  if (indice < playingArray.length-1 && !helped) {
     insertQueueArray();
   }
 }
