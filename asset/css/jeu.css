@@ -67,10 +67,14 @@ background-color: transparent!important;
 }
 
 .col-sublime{
-  /* background-color: white;
+  background-color: white;
   color: #AA7467;
-  border:2px solid white;
-  border-radius: 20px; */
+  border:2px solid #AA7467;
+  border-radius: 20px;
+}
+
+.mt-sublime{
+  margin-top:50px;
 }
 
   @media screen and (min-width: 768px) {

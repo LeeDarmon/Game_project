@@ -51,19 +51,18 @@
           </div>
         </nav>
       </header>
-    <main>
+    <main style="font-weight: bold;">
 
       <div class="container-fluid">
 
         <form action="#" method="GET">
 
-          <div class="row">
+          <div class="row mt-sublime">
             <!-- Première ligne -->
-            <div class="col-md-3 col-12 order-1 order-md-1 text-center mb-3 title-theme">Thème</div>
-            <div class="col-md-3 col-12 order-3 order-md-2 text-center mb-3 title-level">Niveau</div>
-            <div class="col-md-6 col-12 order-5 order-md-3 text-center mb-3 title-rules">Règles</div>
+            <div class="col-md-3 offset-md-3 col-12 order-1 order-md-1 text-center mb-3 title-theme float-right">Thème</div>
+            <div class="col-md-3  col-12 order-3 col-12 order-md-2 text-center mb-3 title-level float-left">Niveau</div>
             <!-- Deuxième ligne -->
-            <div class="col-md-3 h-100 order-2 order-md-4 col-sublime">
+            <div class="col-12 col-md-3 offset-md-3 h-100 order-2 order-md-4 float-right">
               <div id="carouselThemeControls" class="carousel slide" data-ride="carousel" data-pause="true"
                 data-interval="false">
                 <div class="carousel-inner">
@@ -93,7 +92,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-md-3 order-md-5 order-4 col-sublime">
+            <div class="col-12 col-md-3 order-md-5 order-4 float-left">
               <div id="carouselLevelControls" class="carousel slide" data-ride="carousel" data-pause="true"
                 data-interval="false">
                 <div class="carousel-inner">
@@ -123,7 +122,8 @@
                 </a>
               </div>
             </div>
-            <div class="col-md-6 text-center order-md-6 order-6 col-sublime">
+            <div class="col-md-6 offset-md-3 text-center order-md-6 order-6 col-sublime mt-5 mb-5">
+              <div class="col-md-12 col-12 order-5 order-md-3 text-center mb-3 title-rules">Règles</div>
               <ol>
                 <li>Temps pour deviner une liste de mot : <span id="rule1">60</span> secondes</li>
                 <li>Nombre de mots : <span id="rule2">10</span></li>
